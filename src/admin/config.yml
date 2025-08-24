@@ -23,45 +23,48 @@ collections:
       
   - name: "siteContent"
     label: "إعدادات الموقع"
-    file: "src/_data/section.json"   # هنا هيكون ملف JSON
-    format: "json"
-    fields:
-      - name: "activities"
-        label: "الأنشطة"
-        widget: "list"
+    files:
+      - file: "src/_data/section.json"   # هنا ملف JSON
+        label: "البيانات العامة"
+        name: "section"
+        format: "json"
         fields:
-          - { name: "title", label: "العنوان", widget: "string" }
-          - { name: "description", label: "الوصف", widget: "text" }
-          - { name: "icon", label: "الأيقونة", widget: "string" }
-
-      - name: "team"
-        label: "الفريق"
-        widget: "list"
-        fields:
-          - { name: "name", label: "الاسم", widget: "string" }
-          - { name: "role", label: "الوظيفة", widget: "string" }
-          - { name: "image", label: "الصورة", widget: "image" }
-          - { name: "feedback", label: "التعليق", widget: "text" }
-          - name: "social"
-            label: "التواصل الاجتماعي"
+          - name: "activities"
+            label: "الأنشطة"
             widget: "list"
             fields:
-              - { name: "link", label: "الرابط", widget: "string" }
+              - { name: "title", label: "العنوان", widget: "string" }
+              - { name: "description", label: "الوصف", widget: "text" }
               - { name: "icon", label: "الأيقونة", widget: "string" }
 
-      - name: "testimonials"
-        label: "آراء الناس"
-        widget: "list"
-        fields:
-          - { name: "name", label: "الاسم", widget: "string" }
-          - { name: "profession", label: "المهنة", widget: "string" }
-          - { name: "feedback", label: "التعليق", widget: "text" }
-          - { name: "image", label: "الصورة", widget: "image" }
-          - { name: "rating", label: "التقييم", widget: "number" }
+          - name: "team"
+            label: "الفريق"
+            widget: "list"
+            fields:
+              - { name: "name", label: "الاسم", widget: "string" }
+              - { name: "role", label: "الوظيفة", widget: "string" }
+              - { name: "image", label: "الصورة", widget: "image" }
+              - { name: "feedback", label: "التعليق", widget: "text" }
+              - name: "social"
+                label: "التواصل الاجتماعي"
+                widget: "list"
+                fields:
+                  - { name: "link", label: "الرابط", widget: "string" }
+                  - { name: "icon", label: "الأيقونة", widget: "string" }
 
-      - name: "faqs"
-        label: "الأسئلة الشائعة"
-        widget: "list"
-        fields:
-          - { name: "question", label: "السؤال", widget: "string" }
-          - { name: "answer", label: "الإجابة", widget: "text" }
+          - name: "testimonials"
+            label: "آراء الناس"
+            widget: "list"
+            fields:
+              - { name: "name", label: "الاسم", widget: "string" }
+              - { name: "profession", label: "المهنة", widget: "string" }
+              - { name: "feedback", label: "التعليق", widget: "text" }
+              - { name: "image", label: "الصورة", widget: "image" }
+              - { name: "rating", label: "التقييم", widget: "number" }
+
+          - name: "faqs"
+            label: "الأسئلة الشائعة"
+            widget: "list"
+            fields:
+              - { name: "question", label: "السؤال", widget: "string" }
+              - { name: "answer", label: "الإجابة", widget: "text" }

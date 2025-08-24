@@ -60,7 +60,7 @@ collections:
   - name: "siteContent"
     label: "المحتوى العام"
     files:
-      - file: "src/_data/admin.json"
+      - file: "src/_data/section.json"
         label: "المحتوى العام"
         name: "content"
         fields:

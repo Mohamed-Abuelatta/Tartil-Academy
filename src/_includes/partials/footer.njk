@@ -1,0 +1,99 @@
+{# ذيل الصفحة #}
+
+<div class="container-fluid footer pt-3 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-3">
+                <div class="row py-5 d-none">
+                    <div class="col-lg-7">
+                        <h1 class="text-light mb-0">Subscribe our newsletter</h1>
+                        <p class="text-secondary">Get the latest news and other tips</p>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="position-relative mx-auto">
+                            <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Subcribe</button>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="border-top border-secondary"></div>
+                    </div>
+                </div>
+                <div class="row text-end g-4 footer-inner">
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item mt-5">
+                            <h4 class="text-light mb-4">{{ site.title }}</h4>
+                            <p class="mb-4 text-secondary">{{ site.about }}</p>
+                            <a href="" class="btn btn-primary py-2 px-4">اشترك الان</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item mt-5">
+                            <h4 class="text-light mb-4">بيانات التواصل</h4>
+                            <div class="d-flex flex-column">
+                                <h6 class="text-secondary mb-0">ايميل</h6>
+                                <div class="d-flex justify-content-end align-items-center border-bottom py-3">
+                                    <a href="" class="text-body">{{ site.email }}</a>
+                                    <span class="flex-shrink-0 btn-square bg-primary ms-3 p-4"><i class="fa fa-envelope text-dark"></i></span>
+                                </div>
+                                <h6 class="text-secondary mt-3 mb-0">تلفون</h6>
+                                <div class="d-flex justify-content-end align-items-center py-3">
+                                    <a href="" class="text-body">{{ site.phone }}</a>
+                                    <span class="flex-shrink-0 btn-square bg-primary ms-3 p-4"><i class="fa fa-phone-alt text-dark"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item mt-5">
+                            <h4 class="text-light mb-4">الصفحات الرئيسية</h4>
+                            <div class="d-flex flex-column align-items-end">
+                                
+                                {% for key, item in navigation %}
+                                <a class="text-body mb-2" href="{{ item.url }}">{{ item.title }}<i class="fa fa-check text-primary ms-3"></i></a>
+                                {% endfor %}
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item mt-5">
+                            <h4 class="text-light mb-4">التواصل الاجتماعي</h4>
+                            <div class="d-flex flex-column">
+                                
+                                <div class="d-flex justify-content-end align-items-center border-bottom">
+                                    <a href="{{ site.social.facebook }}" class="text-body">فيسبوك</a>
+                                    <span class="flex-shrink-0 btn-square bg-primary ms-3 p-4"><i class="fab fa-facebook-f text-dark"></i></span>
+                                </div>
+                                <div class="d-flex justify-content-end align-items-center border-bottom">
+                                    <a href="{{ site.social.twitter }}" class="text-body">تويتر</a>
+                                    <span class="flex-shrink-0 btn-square bg-primary ms-3 p-4"><i class="fab fa-twitter text-dark"></i></span>
+                                </div>
+                                <div class="d-flex justify-content-end align-items-center border-bottom">
+                                    <a href="{{ site.social.youtube }}" class="text-body">يوتيوب</a>
+                                    <span class="flex-shrink-0 btn-square bg-primary ms-3 p-4"><i class="fab fa-youtube text-dark"></i></span>
+                                </div>
+                                <div class="d-flex justify-content-end align-items-center border-bottom">
+                                    <a href="{{ site.social.instagram }}" class="text-body">انستاجرام</a>
+                                    <span class="flex-shrink-0 btn-square bg-primary ms-3 p-4"><i class="fab fa-instagram text-dark"></i></span>
+                                </div>
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container py-4">
+                <div class="border-top border-secondary pb-4"></div>
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">{{ site.title }}</a>, جميع الحقوق محفوظة.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+                        بواسطة <a class="border-bottom" target="_blank" href="http://wa.me/905523836514">{{ site.author }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>

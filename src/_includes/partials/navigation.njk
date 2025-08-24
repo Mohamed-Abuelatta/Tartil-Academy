@@ -1,0 +1,4 @@
+{# قائمة التنقل #}
+{% for key, item in navigation %}
+  <a href="{{ item.url }}" class="nav-item nav-link">{{ item.title }}</a>
+{% endfor %}

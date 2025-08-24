@@ -1,0 +1,49 @@
+
+<div class="container-fluid fixed-top">
+    <div class="container topbar d-none d-lg-block">
+        <div class="topbar-inner">
+            <div class="row gx-0">
+                <div class="col-lg-7 text-start">
+                    <div class="h-100 d-inline-flex align-items-center me-4">
+                        <span class="fa fa-phone-alt me-2 text-dark"></span>
+                        <a href="#" class="text-secondary"><span>{{ site.phone }}</span></a>
+                    </div>
+                    <div class="h-100 d-inline-flex align-items-center">
+                        <span class="far fa-envelope me-2 text-dark"></span>
+                        <a href="#" class="text-secondary"><span>{{ site.email }}</span></a>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-end">
+                    <div class="h-100 d-inline-flex align-items-center">
+                        <span class="text-body">Follow Us:</span>
+                        <a class="text-dark px-2" target="_blank" href="{{ site.social.facebook }}"><i class="fab fa-facebook-f"></i></a>
+                        <a class="text-dark px-2" target="_blank" href="{{ site.social.twitter }}"><i class="fab fa-twitter"></i></a>
+                        <a class="text-dark px-2" target="_blank" href="{{ site.social.youtube }}"><i class="fab fa-youtube"></i></a>
+                        <a class="text-dark px-2" target="_blank" href="{{ site.social.instagram }}"><i class="fab fa-instagram"></i></a>
+                        <a class="text-body ps-4" target="_blank" href="/admin/"><i class="fa fa-lock text-dark me-1"></i> Signup/login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <nav class="navbar navbar-light navbar-expand-lg py-3">
+            <a href="/" class="navbar-brand">
+                <h1 class="mb-0 text-primary">{{ site.title }}</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars text-primary"></span>
+            </button>
+            <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
+                <div class="navbar-nav ms-lg-auto mx-xl-auto">
+                    
+                    {% include "../partials/navigation.njk" %}
+                    {# يمكنك إضافة المزيد من الروابط هنا إذا لزم الأمر #}
+
+                </div>
+                <a href="/donate/" class="btn btn-primary py-2 px-4 d-none d-xl-inline-block">تبرع الان</a>
+            </div>
+        </nav>
+    </div>
+</div>
+        

@@ -1,0 +1,72 @@
+---
+title: الاسئلة الشائعة
+breadcrumb:
+  - { label: "الرئيسية", url: "/" }
+  - { label: "الاسئلة الشائعة", url: "/pages/faqs/" }
+---
+{% extends "../_includes/layouts/page.njk" %}
+{% block pageContent %}
+
+<style>
+  .accordion-button::after{
+    margin-right: auto;
+    margin-left: unset;
+  }
+</style>
+<div class="container my-5">
+  <h1 class="mb-4 text-center">{{ title }}</h1>
+
+  <div class="accordion" id="faqAccordion">
+    {% for item in section.faqs %}
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading{{ loop.index }}">
+          <button class="accordion-button {% if not loop.first %}collapsed{% endif %}" 
+                  type="button" data-bs-toggle="collapse" 
+                  data-bs-target="#collapse{{ loop.index }}" 
+                  aria-expanded="{% if loop.first %}true{% else %}false{% endif %}" 
+                  aria-controls="collapse{{ loop.index }}">
+            {{ item.question }}
+          </button>
+        </h2>
+        <div id="collapse{{ loop.index }}" 
+             class="accordion-collapse collapse {% if loop.first %}show{% endif %}" 
+             aria-labelledby="heading{{ loop.index }}" 
+             data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            {{ item.answer }}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <!-- قسم إضافة سؤال -->
+  <div class="mt-5">
+    <h3 class="mb-3 text-center">لديك سؤال آخر؟</h3>
+    <form method="POST" action="/thanks/" class="text-end" data-netlify="true" name="faq-form">
+      <input type="hidden" name="form-name" value="faq">
+
+      <div class="mb-3">
+        <label for="name" class="form-label">الاسم</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">البريد الإلكتروني</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="question" class="form-label">سؤالك</label>
+        <textarea class="form-control" id="question" name="question" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">إرسال السؤال</button>
+    </form>
+  </div>
+
+</div>
+
+
+
+{% endblock %}
+
+
+

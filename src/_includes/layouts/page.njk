@@ -1,0 +1,35 @@
+{% extends "layouts/base.njk" %}
+
+{% block baseContent %}
+    <!-- Hero Start -->
+    <div class="container-fluid hero-header">
+        <div class="container">
+            <div class="hero-header-inner text-end animated zoomIn">
+                <h1 class="display-1 text-dark">{{ title }}</h1>
+                {% if breadcrumb %}
+                <ol class="breadcrumb mb-0">
+                    {% for item in breadcrumb %}
+                        <li class="breadcrumb-item {% if loop.last %}text-dark{% endif %}" 
+                            {% if loop.last %}aria-current="page"{% endif %}>
+                            {% if not loop.last %}
+                              <a href="{{ item.url }}">{{ item.label }}</a>
+                            {% else %}
+                              {{ item.label }}
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ol>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+    <!-- Content Start -->
+        <div class="container-xxl py-5">
+            <div class="container text-end" dir="rtl">
+                {% block pageContent %}{% endblock %}
+            </div>
+        </div>
+    <!-- Content End -->
+{% endblock %}

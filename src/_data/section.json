@@ -1,0 +1,125 @@
+ {
+    "activities": [
+        {
+        "title": "تعليم القرآن",
+        "description": "تعليم القرآن الكريم للأطفال والكبار بأساليب حديثة.",
+        "icon": "fa fa-quran fa-4x text-dark"
+        },
+        {
+        "title": "دروس الفقه",
+        "description": "تقديم دروس فقهية متعمقة في مختلف مجالات الشريعة.",
+        "icon": "fa fa-mosque fa-4x text-dark"
+        },
+        {
+        "title": "حديث وسنة",
+        "description": "تنظيم فعاليات ثقافية لتعزيز الهوية الإسلامية.",
+        "icon": "fa fa-book fa-4x text-dark"
+        },
+        {   
+        "title": "مساعدة المحتاجين",
+        "description": "تنظيم رحلات تعليمية لتقديم الدعم للمحتاجين.",
+        "icon": "fa fa-hands fa-4x text-dark"
+        },
+        {   
+        "title": "الانشطة التطوعية",
+        "description": "تنظيم ورش عمل لتعليم المهارات الحياتية من منظور إسلامي.",
+        "icon": "fa fa-donate fa-4x text-dark"
+        },
+        {
+        "title": "الندوات والمحاضرات",
+        "description": "إقامة ندوات ومحاضرات حول مواضيع إسلامية مع",
+        "icon": "fa fa-book-open fa-4x text-dark"
+        }
+    ],
+    "team": [
+        {
+            "name": "أحمد بن سعيد",
+            "role": "مدير المركز",
+            "image": "assets/images/team-1.jpg",
+            "feedback": "نحن هنا لخدمة المجتمع وتعزيز القيم الإسلامية. نؤمن بأن التعليم هو المفتاح لبناء مجتمع قوي. نسعى لترسيخ اواصر الدين واعادة ترميم المجتمع",
+            "social": [
+                {"link": "https://www.facebook.com", "icon": "fab fa-facebook"},
+                {"link": "https://twitter.com", "icon": "fab fa-twitter"},
+                {"link": "https://www.instagram.com", "icon": "fab fa-instagram"}
+            ]
+        },
+        {
+            "name": "فاطمة الزهراء",
+            "role": "منسقة الأنشطة",
+            "image": "assets/images/team-2.jpg",
+            "feedback": "نحن هنا لخدمة المجتمع وتعزيز القيم الإسلامية.",
+            "social": [
+                {"link": "https://www.facebook.com", "icon": "fab fa-facebook"},
+                {"link": "https://twitter.com", "icon": "fab fa-twitter"},
+                {"link": "https://www.instagram.com", "icon": "fab fa-instagram"}
+            ]
+        },
+        {
+            "name": "يوسف القاضي",
+            "role": "محاضر فقه",
+            "image": "assets/images/team-3.jpg",
+            "feedback": "نحن هنا لخدمة المجتمع وتعزيز القيم الإسلامية.",
+            "social": [
+                {"link": "https://www.facebook.com", "icon": "fab fa-facebook"},
+                {"link": "https://twitter.com", "icon": "fab fa-twitter"},
+                {"link": "https://www.instagram.com", "icon": "fab fa-instagram"}
+            ]
+        },
+        {
+            "name": "عائشة النعيمي",
+            "role": "منسقة التطوع",
+            "image": "assets/images/team-4.jpg",
+            "feedback": "نحن هنا لخدمة المجتمع وتعزيز القيم الإسلامية.",
+            "social": [
+                {"link": "https://www.facebook.com", "icon": "fab fa-facebook"},
+                {"link": "https://twitter.com", "icon": "fab fa-twitter"},
+                {"link": "https://www.instagram.com", "icon": "fab fa-instagram"}
+            ]
+        }
+    ],
+    "testimonials": [
+        {
+        "name": "علي بن الحسين",
+        "profession": "طالب",
+        "feedback": "المركز يقدم خدمات رائعة للمجتمع.",
+        "image": "assets/images/testimonial-1.jpg",
+        "rating": 3
+        },
+        {
+        "name": "سارة العلي",
+        "profession": "طالب",
+        "feedback": "الأنشطة هنا تعزز من فهمنا للدين.",
+        "image": "assets/images/testimonial-2.jpg",
+        "rating": 4
+        },
+        {
+        "name": "محمد الجابري", 
+        "profession": "طالب",
+        "feedback": "أحببت ورش العمل التي يقدمونها.",
+        "image": "assets/images/testimonial-3.jpg",
+        "rating": 3
+        },
+        {
+        "name": "ليلى النعيمي", 
+        "profession": "طالب",
+        "feedback": "الأنشطة هنا تعزز من فهمنا للدين.",
+        "image": "assets/images/testimonial-4.jpg",
+        "rating": 2
+        }
+    ],
+    "faqs" :[
+        {
+            "question": "ما هي خدمة الموقع؟",
+            "answer": "الموقع يقدم محتوى تعليمي متنوع ومقالات مفيدة."
+        },
+        {
+            "question": "كيف يمكنني التواصل معكم؟",
+            "answer": "يمكنك التواصل عبر صفحة الاتصال أو البريد الإلكتروني."
+        },
+        {
+            "question": "هل الخدمة مجانية؟",
+            "answer": "نعم، جميع الخدمات الأساسية مجانية."
+        }
+    ]
+
+ }

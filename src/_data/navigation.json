@@ -1,0 +1,22 @@
+{
+    "home": {
+        "title": "الصفحة الرئيسية",
+        "url": "/"
+    },
+    "about": {
+        "title": "عن الاكاديمية",
+        "url": "/pages/about/"
+    },
+    "blog": {
+        "title": "المدونة",
+        "url": "/pages/posts/"
+    },
+    "faq": {
+        "title": "الأسئلة الشائعة",
+        "url": "/pages/faqs/"
+    },
+    "contact": {
+        "title": "اتصل بنا",
+        "url": "/pages/contact/"
+    }
+}

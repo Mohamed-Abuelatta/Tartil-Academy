@@ -1,0 +1,47 @@
+---
+title: اتصل بنا
+breadcrumb:
+  - { label: "الرئيسية", url: "/" }
+  - { label: "اتصل بنا", url: "/pages/contact/" }
+---
+{% extends "../_includes/layouts/page.njk" %}
+{% block pageContent %}
+
+
+<div class="container my-5">
+  <h1 class="text-center mb-4">{{ title }}</h1>
+  <p class="text-center mb-5">نسعد بتواصلك معنا لأي استفسارات أو اقتراحات.</p>
+
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <form method="POST" action="/thanks/" class="text-end" data-netlify="true" name="contact-form">
+        <input type="hidden" name="form-name" value="contact">
+
+        <div class="mb-3">
+          <label for="name" class="form-label">الاسم</label>
+          <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        
+        <div class="mb-3">
+          <label for="email" class="form-label">البريد الإلكتروني</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        
+        <div class="mb-3">
+          <label for="subject" class="form-label">الموضوع</label>
+          <input type="text" class="form-control" id="subject" name="subject">
+        </div>
+        
+        <div class="mb-3">
+          <label for="message" class="form-label">الرسالة</label>
+          <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-primary px-4">إرسال</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

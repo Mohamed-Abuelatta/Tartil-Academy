@@ -1,0 +1,32 @@
+
+
+{# تخطيط الصفحات #}
+{% extends "layouts/base.njk" %}
+{% block baseContent %}
+
+    <!-- Hero Start -->
+    <div class="container-fluid hero-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 ms-auto text-end">
+                    <div class="hero-header-inner animated zoomIn">
+                        <p class="fs-4 text-dark">{{ site.title }}</p>
+                        <h1 class="display-6 mb-5 text-dark">{{ site.description }}</h1>
+                        <a href="/pages/contact/" class="btn btn-primary py-3 px-5">اشترك الان</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+    <!-- Content Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                {% block homeContent %}{% endblock %}
+            </div>
+        </div>
+    <!-- Content End -->
+    
+
+{% endblock %}

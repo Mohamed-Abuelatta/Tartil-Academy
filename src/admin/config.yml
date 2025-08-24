@@ -1,13 +1,15 @@
 backend:
   name: git-gateway
-  branch: main
+  branch: main  # أو master حسب الفرع الرئيسي
 
-media_folder: "src/assets/imgs"
-public_folder: "/assets/imgs"
+media_folder: "src/assets/images"
+public_folder: "/assets/images"
 
 locale: 'ar'
 
 collections:
+
+  # Folder-based collection للمدونة
   - name: "blog"
     label: "المقالات"
     folder: "src/collections/posts"
@@ -21,74 +23,80 @@ collections:
       - {label: "العلامات", name: "tags", widget: "list", default: ["posts"]}
       - {label: "المحتوى", name: "body", widget: "markdown"}
 
-  - name: "siteContent"
-    label: "إعدادات الموقع"
-    file: "src/_data/section.json"
-    format: "json"
-    fields:
-      - name: "activities"
-        label: "الأنشطة"
-        widget: "list"
+  # File-based collection للبيانات العامة للموقع (site.json)
+  - name: "siteInfo"
+    label: "معلومات الموقع"
+    files:
+      - file: "src/_data/site.json"
+        label: "الموقع"
+        name: "site"
         fields:
-          - { name: "title", label: "العنوان", widget: "string" }
+          - { name: "title", label: "عنوان الموقع", widget: "string" }
           - { name: "description", label: "الوصف", widget: "text" }
-          - { name: "icon", label: "الأيقونة", widget: "string" }
-      - name: "team"
-        label: "الفريق"
-        widget: "list"
-        fields:
-          - { name: "name", label: "الاسم", widget: "string" }
-          - { name: "role", label: "الوظيفة", widget: "string" }
-          - { name: "image", label: "الصورة", widget: "image" }
-          - { name: "feedback", label: "التعليق", widget: "text" }
+          - { name: "slogan", label: "الشعار", widget: "string" }
+          - { name: "about", label: "عن الأكاديمية", widget: "text" }
+          - { name: "vision", label: "الرؤية", widget: "text" }
+          - { name: "mission", label: "الرسالة", widget: "text" }
+          - { name: "value", label: "القيمة", widget: "text" }
+          - name: "values"
+            label: "القيم"
+            widget: "list"
+            field: { name: "item", label: "قيمة", widget: "string" }
+          - { name: "topic", label: "الموضوع", widget: "text" }
+          - { name: "url", label: "رابط الموقع", widget: "string" }
+          - { name: "author", label: "المؤلف", widget: "string" }
+          - { name: "phone", label: "الهاتف", widget: "string" }
+          - { name: "email", label: "البريد الإلكتروني", widget: "string" }
           - name: "social"
-            label: "التواصل الاجتماعي"
+            label: "روابط التواصل الاجتماعي"
+            widget: "object"
+            fields:
+              - { name: "facebook", label: "فيسبوك", widget: "string" }
+              - { name: "twitter", label: "تويتر", widget: "string" }
+              - { name: "instagram", label: "إنستجرام", widget: "string" }
+              - { name: "youtube", label: "يوتيوب", widget: "string" }
+
+  # File-based collection للأنشطة والفريق والشهادات والأسئلة (admin.json)
+  - name: "siteContent"
+    label: "المحتوى العام"
+    files:
+      - file: "src/_data/admin.json"
+        label: "المحتوى العام"
+        name: "content"
+        fields:
+          - name: "activities"
+            label: "الأنشطة"
             widget: "list"
             fields:
-              - { name: "link", label: "الرابط", widget: "string" }
+              - { name: "title", label: "العنوان", widget: "string" }
+              - { name: "description", label: "الوصف", widget: "text" }
               - { name: "icon", label: "الأيقونة", widget: "string" }
-      - name: "testimonials"
-        label: "آراء الناس"
-        widget: "list"
-        fields:
-          - { name: "name", label: "الاسم", widget: "string" }
-          - { name: "profession", label: "المهنة", widget: "string" }
-          - { name: "feedback", label: "التعليق", widget: "text" }
-          - { name: "image", label: "الصورة", widget: "image" }
-          - { name: "rating", label: "التقييم", widget: "number" }
-      - name: "faqs"
-        label: "الأسئلة الشائعة"
-        widget: "list"
-        fields:
-          - { name: "question", label: "السؤال", widget: "string" }
-          - { name: "answer", label: "الإجابة", widget: "text" }
-
-  - name: "siteInfo"
-    label: "معلومات عامة عن الموقع"
-    file: "src/_data/site.json"
-    format: "json"
-    fields:
-      - { name: "title", label: "عنوان الموقع", widget: "string" }
-      - { name: "description", label: "الوصف", widget: "text" }
-      - { name: "slogan", label: "الشعار", widget: "string" }
-      - { name: "about", label: "عن الأكاديمية", widget: "text" }
-      - { name: "vision", label: "الرؤية", widget: "text" }
-      - { name: "mission", label: "الرسالة", widget: "text" }
-      - { name: "value", label: "القيمة", widget: "text" }
-      - name: "values"
-        label: "القيم"
-        widget: "list"
-        field: { name: "item", label: "قيمة", widget: "string" }
-      - { name: "topic", label: "الموضوع", widget: "text" }
-      - { name: "url", label: "رابط الموقع", widget: "string" }
-      - { name: "author", label: "المؤلف", widget: "string" }
-      - { name: "phone", label: "الهاتف", widget: "string" }
-      - { name: "email", label: "البريد الإلكتروني", widget: "string" }
-      - name: "social"
-        label: "روابط التواصل الاجتماعي"
-        widget: "object"
-        fields:
-          - { name: "facebook", label: "فيسبوك", widget: "string" }
-          - { name: "twitter", label: "تويتر", widget: "string" }
-          - { name: "instagram", label: "إنستجرام", widget: "string" }
-          - { name: "youtube", label: "يوتيوب", widget: "string" }
+          - name: "team"
+            label: "الفريق"
+            widget: "list"
+            fields:
+              - { name: "name", label: "الاسم", widget: "string" }
+              - { name: "role", label: "الوظيفة", widget: "string" }
+              - { name: "image", label: "الصورة", widget: "image" }
+              - { name: "feedback", label: "التعليق", widget: "text" }
+              - name: "social"
+                label: "التواصل الاجتماعي"
+                widget: "list"
+                fields:
+                  - { name: "link", label: "الرابط", widget: "string" }
+                  - { name: "icon", label: "الأيقونة", widget: "string" }
+          - name: "testimonials"
+            label: "آراء الناس"
+            widget: "list"
+            fields:
+              - { name: "name", label: "الاسم", widget: "string" }
+              - { name: "profession", label: "المهنة", widget: "string" }
+              - { name: "feedback", label: "التعليق", widget: "text" }
+              - { name: "image", label: "الصورة", widget: "image" }
+              - { name: "rating", label: "التقييم", widget: "number" }
+          - name: "faqs"
+            label: "الأسئلة الشائعة"
+            widget: "list"
+            fields:
+              - { name: "question", label: "السؤال", widget: "string" }
+              - { name: "answer", label: "الإجابة", widget: "text" }

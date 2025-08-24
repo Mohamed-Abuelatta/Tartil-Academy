@@ -20,9 +20,7 @@ collections:
       - {label: "الصورة المميزة", name: "featured_image", widget: "image", required: false}
       - {label: "العلامات", name: "tags", widget: "list", default: ["posts"]}
       - {label: "المحتوى", name: "body", widget: "markdown"}
-
-  
-collections:
+      
   - name: "siteContent"
     label: "إعدادات الموقع"
     file: "src/_data/section.json"   # هنا هيكون ملف JSON

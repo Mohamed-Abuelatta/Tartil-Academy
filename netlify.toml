@@ -1,6 +1,9 @@
 [build]
   publish = "_site"
   command = "npm run build"
+  
+[[plugins]]
+  package = "@netlify/plugin-sitemap"
 
 [build.environment]
   NODE_VERSION = "18"

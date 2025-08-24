@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: main # أو master حسب الفرع الرئيسي
 
-media_folder: "src/assets/imgs"
-public_folder: "/assets/imgs"
+media_folder: "src/assets/images"
+public_folder: "/assets/images"
 
 locale: 'ar'
 
